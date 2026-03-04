@@ -2,44 +2,130 @@
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>충북벌초대행</title>
     <style>
-        body { font-family: sans-serif; line-height: 1.6; margin: 0; padding: 0; }
-        header { background: #333; color: white; padding: 1rem; text-align: center; }
-        nav { background: #f4f4f4; padding: 0.5rem; text-align: center; }
-        .hero { background: #eee; padding: 50px; text-align: center; }
-        .section { padding: 20px; max-width: 800px; margin: auto; }
-        table { width: 100%; border-collapse: collapse; margin: 20px 0; }
-        th, td { border: 1px solid #ddd; padding: 12px; text-align: center; }
-        th { background: #f8f8f8; }
-        .contact-box { background: #fffbe6; padding: 20px; border: 1px solid #ffe58f; }
+        body { font-family: 'Malgun Gothic', sans-serif; line-height: 1.6; margin: 0; padding: 0; color: #333; }
+        header { background: #fff; padding: 20px; text-align: left; border-bottom: 1px solid #eee; }
+        .logo { font-size: 24px; font-weight: bold; margin-left: 10%; }
+        nav { text-align: center; padding: 15px; background: #fff; position: sticky; top: 0; z-index: 100; border-bottom: 1px solid #eee; }
+        nav a { margin: 0 15px; text-decoration: none; color: #666; font-weight: bold; }
+
+        .hero { background: #444; color: white; padding: 60px 20px; text-align: center; }
+        .hero h2 { margin: 0; font-size: 2em; }
+        .hero p { font-size: 1.2em; color: #ccc; }
+
+        .section { padding: 50px 10%; text-align: center; }
+        .section-title { font-size: 28px; margin-bottom: 40px; position: relative; }
+        .section-title span { display: block; font-size: 14px; color: orange; text-transform: uppercase; }
+
+        /* 서비스 안내 카드 스타일 */
+        .service-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; margin-bottom: 50px; }
+        .service-card { border: 1px solid #eee; overflow: hidden; border-radius: 8px; transition: 0.3s; }
+        .service-card:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0,0,0,0.1); }
+        .service-card img { width: 100%; height: 200px; object-fit: cover; background: #ddd; }
+        .service-card h4 { margin: 15px 0 5px; color: #333; }
+        .service-card p { font-size: 14px; color: #777; padding: 0 15px 15px; }
+
+        /* 테이블 스타일 */
+        .price-table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+        .price-table th, .price-table td { border: 1px solid #eee; padding: 15px; }
+        .price-table th { background: #f9f9f9; }
+        .price-emphasis { color: orange; font-weight: bold; }
+        
+        .contact-info { background: #f8f9fa; padding: 30px; border-radius: 10px; margin-top: 30px; }
+        .phone-num { font-size: 24px; color: #d32f2f; font-weight: bold; }
     </style>
 </head>
 <body>
 
 <header>
-    <h1>충북벌초대행</h1>
+    <div class="logo">충북벌초대행</div>
 </header>
 
 <nav>
-    서비스안내 | 대행신청 | 게시판
+    <a href="#service">서비스안내</a>
+    <a href="#apply">대행신청</a>
+    <a href="#board">게시판</a>
 </nav>
 
 <div class="hero">
-    <h2>2024년 벌초, 사초 예약 접수 중</h2>
-    <p>충북 전 지역, 원주, 경기 동부/남부</p>
-    <h3 style="color: red;">문의: 010-5910-1144</h3>
+    <p>2024년 벌초, 사초 접수 예약중입니다</p>
+    <h2>충북벌초대행</h2>
+    <p>(원주, 경기 동부, 남부, 여주 이천, 평택)</p>
 </div>
 
-<div class="section">
+<div id="service" class="section">
+    <h3 class="section-title"><span>service</span>서비스안내</h3>
+    <div class="service-container">
+        <div class="service-card">
+            <img src="https://via.placeholder.com/400x300?text=종중묘+관리" alt="종중묘">
+            <h4>종중 묘 관리 전문</h4>
+            <p>문중 및 대가족 묘역 정밀 관리</p>
+        </div>
+        <div class="service-card">
+            <img src="https://via.placeholder.com/400x300?text=사초+작업" alt="사초">
+            <h4>사초(잔디심기)</h4>
+            <p>훼손 잔디 살리기 및 보수 전문</p>
+        </div>
+        <div class="service-card">
+            <img src="https://via.placeholder.com/400x300?text=산소+관리" alt="산소관리">
+            <h4>산소(벌초)관리전문</h4>
+            <p>정성스러운 벌초 및 주변 정리</p>
+        </div>
+        <div class="service-card">
+            <img src="https://via.placeholder.com/400x300?text=억새풀+제거" alt="억새풀">
+            <h4>억새풀 제거</h4>
+            <p>칡넝쿨, 대나무, 아카시아 전문 제거</p>
+        </div>
+        <div class="service-card">
+            <img src="https://via.placeholder.com/400x300?text=잡목+제거" alt="잡목제거">
+            <h4>잡목제거, 주변정리</h4>
+            <p>우거진 나무 및 주변 잡목 정리</p>
+        </div>
+        <div class="service-card">
+            <img src="https://via.placeholder.com/400x300?text=제초+작업" alt="제초작업">
+            <h4>공장, 주택 등 제초</h4>
+            <p>대규모 제초 작업 및 부지 관리</p>
+        </div>
+    </div>
+</div>
+
+<div class="section" style="background: #fafafa;">
     <h3>벌초 비용 안내</h3>
-    <table>
-        <tr><th>평수</th><th>비용</th></tr>
-        <tr><td>2~30평</td><td>10~20만원</td></tr>
-        <tr><td>30~50평</td><td>20~30만원</td></tr>
-        <tr><td>50~100평</td><td>30~50만원</td></tr>
+    <table class="price-table">
+        <thead>
+            <tr>
+                <th>면적(평)</th>
+                <th>비용</th>
+                <th>안내사항</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>2~30평</td>
+                <td class="price-emphasis">10~20(만원)</td>
+                <td rowspan="4">모든 작업은 비대면으로<br>진행되며 완료 후 사진 전송<br>확인 후 입금하시면 됩니다.</td>
+            </tr>
+            <tr>
+                <td>30~50평</td>
+                <td class="price-emphasis">20~30(만원)</td>
+            </tr>
+            <tr>
+                <td>50~100평</td>
+                <td class="price-emphasis">30~50(만원)</td>
+            </tr>
+            <tr>
+                <td>100평 ~</td>
+                <td class="price-emphasis">50(만원) ~</td>
+            </tr>
+        </tbody>
     </table>
-    <p>* 모든 작업은 비대면 가능하며, 완료 후 사진을 전송해 드립니다.</p>
+    
+    <div class="contact-info">
+        <p>현장 상황에 따라 비용은 합리적인 협의가 있을 수 있습니다.</p>
+        <div class="phone-num">문의: 010-5910-1144</div>
+    </div>
 </div>
 
 </body>
